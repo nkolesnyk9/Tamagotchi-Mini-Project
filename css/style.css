@@ -1,61 +1,95 @@
-
 body {
-    background-color: #EFEFEF;
-    color: #696969;
-    font-weight: bold;
-  }
-  
-.header {
-    background-color: #CAEBF2;
-    text-align: center;
-    color: #A9A9A9;
-    font-weight: bolder;        
-  
-  }
-.header h1 {
-    font-size: 75px;
-    font-family: Futura;
-    text-align: center;
-  }
+     
+}
+p {
+ text-align: center;
+ 
+}
+header {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	text-shadow: 0px 2px 4px grey;
+	width: 80%;
+  padding: 20px;
+  color: rgb(63, 62, 62);
+  font-size: 22px;
+}
+#logName {
+  display: flex;
+  justify-content:center ;
+}
+.name {
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+  color:black;
+}
+img {
+  width: 300px;
+}
 
-#gameForm {
-    border: 2px solid green;
-    padding: 20px;
-}
-.side{
-    border:3px solid yellow;
-}
-.bar{
-    width: 100px;
-    background: #99cc00;
-    margin: 5px 10px;
-    border-radius:4px;
-    padding: 3px 3px;
-    border: 2px solid black;
-  }
-#gameButtons {
-    border: 2px solid blue;
-    padding: 15px 0px;
-}
-.button{
-    padding: 6px 50px;
-    background: #777;
-    color: #f2f2f2;
-    border-radius: 4px;
-    cursor: pointer;
-    /* width: 100%; */
-    border: 4px solid lime;
-  }
-  
-.button:hover{
-    background: #222;
-  }
-  
-.button:active{
-    background: #777;
-  }
 
-#message {
-    border: 2px solid purple;
-    padding: 20px;
+.bar {
+  width: 70%;
+  background: #dbd8db;
+  border-radius:4px;
+  padding: 3px 3px;
+  text-align: center;
+  height: 35px;
+  margin-bottom: 8px;
+  
 }
+
+h3{
+  padding: 0;
+  margin: 0;
+  
+}
+.eggSection {
+  display: flex;
+  justify-content: center;
+}
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 326px;
+  height: 380px;
+  background-color: rgb(255, 0, 230);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  margin-bottom: 25px;
+  
+}
+
+
+#buttons {
+  display:flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+
+}
+button {
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #ece512;
+  border: white;
+  border-radius: 12px;
+
+
+}
+
+#Footer {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: Center;
+	width: 75%;
+  padding: 15px;
+	border-radius: 20px;
+	text-align: center;
+	background-color: #FFFFFF;
+	box-shadow: 0px 2px 4px grey;
+}
+

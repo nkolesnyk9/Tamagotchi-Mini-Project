@@ -1,5 +1,5 @@
 class Pet {
-  constructor(name,age, hunger = 100, sleep = 100, fun = 100) {
+  constructor(name,age = 0, hunger = 100, sleep = 100, fun = 100) {
     this.name = name
     this.age = age
     this.hunger = hunger
@@ -20,6 +20,24 @@ function inputName () {
   }
 }
 
+
+const addToAge = () => {
+  if(pet.hunger > 0 && pet.sleep > 0 && pet.fun > 0) {
+  pet.age++
+  document.getElementById("ageBar").innerHTML = pet.age;
+} 
+} 
+let timerAge = setInterval(addToAge, 3500)
+
+const morphPet = () => {
+  if(pet.age > 0) {
+    document.getElementById("puppy").src="morphedPup.png"
+  }
+
+}
+morphPet()
+
+console.log(ageBar)
 // makes hunger bar to go down
 const minusHunger = () => {
   if(pet.hunger === 0) {

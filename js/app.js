@@ -25,7 +25,7 @@ const minusHunger = () => {
   if(pet.hunger === 0) {
     clearInterval(timer1)
     alert("Your per is starving!")
-    
+    gameover()
   } else {
     pet.hunger--;
     document.getElementById("hungerBar").style.width = pet.hunger + "px";
@@ -39,7 +39,7 @@ const minusSleep = () => {
   if(pet.sleep === 0) {
     clearInterval(timer2)
     alert("Your pet is tired!")
-
+    gameover()
   } else {
     pet.sleep--;
     document.getElementById("sleepBar").style.width = pet.sleep + "px"
@@ -53,7 +53,7 @@ const minusFun = () => {
   if(pet.fun === 0) {
     clearInterval(timer3)
     alert("Your per is very boooored!")
-
+    gameover()
   } else {
     pet.fun--;
     document.getElementById("funBar").style.width = pet.fun + "px"
@@ -89,3 +89,17 @@ document.getElementById("btnFeed").onclick = addToHunger;
 document.getElementById("btnSleep").onclick = addToSleep;
 document.getElementById("btnPlay").onclick = addToFun;
 
+const gameover =() => {
+  if(pet.hunger === 0 && pet.sleep === 0 && pet.fun === 0) {
+    alert("Game Over") 
+    document.getElementById("puppy").src="dead.png"
+  } else if (pet.hunger === 0) {
+    document.getElementById("puppy").src="hungry pup.png"
+  } else if(pet.sleep === 0) {
+    document.getElementById("puppy").src="tiredPup.png"
+  } else if (pet.fun === 0) {
+    document.getElementById("puppy").src="bored pup.png"
+  }
+}
+
+gameover()

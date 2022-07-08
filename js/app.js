@@ -61,6 +61,31 @@ const minusFun = () => {
   }
 }
 
-let timer1 = setInterval(minusHunger, 400)
-let timer2 = setInterval(minusSleep, 370)
-let timer3 = setInterval(minusFun, 320)
+let timer1 = setInterval(minusHunger, 400) // decrements speed of hunger bar
+let timer2 = setInterval(minusSleep, 370)// decrements speed of sleep bar
+let timer3 = setInterval(minusFun, 320)// decrements speed of fun bar
+
+// incrementing bar % with buttons
+ const addToHunger = () => {
+  if(pet.hunger < 100 && pet.hunger != 0) {
+    pet.hunger += 2;
+  }
+ }
+
+ const addToSleep = () => {
+  if(pet.sleep < 100 && pet.sleep != 0) {
+    pet.sleep += 2
+  }
+ }
+
+ const addToFun = () => {
+  if(pet.fun < 100 && pet.fun != 0) {
+    pet.fun += 2
+  }
+ }
+
+ // incrementing bars
+document.getElementById("btnFeed").onclick = addToHunger;
+document.getElementById("btnSleep").onclick = addToSleep;
+document.getElementById("btnPlay").onclick = addToFun;
+

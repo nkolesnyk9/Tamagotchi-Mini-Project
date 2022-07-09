@@ -34,17 +34,20 @@ const addToAge = () => {
   if(pet.hunger > 0 && pet.sleep > 0 && pet.fun > 0) {
   pet.age++
   document.getElementById("ageBar").innerHTML = pet.age;
-} 
+  if(pet.age > 3) {
+    document.getElementById("puppy").src="images/morphedPup.png"
+  }
+}  
 } 
 let timerAge = setInterval(addToAge, 3500)
 
-const morphPet = () => {
-  if(pet.age > 3) {
-    document.getElementById("puppy").src="morphedPup.png"
-  }
+// const morphPet = () => {
+//   if(pet.age > 3) {
+//     document.getElementById("puppy").src="morphedPup.png"
+//   }
 
-}
-morphPet()
+// }
+// morphPet()
 
 console.log(ageBar)
 // makes hunger bar to go down
@@ -119,13 +122,13 @@ document.getElementById("btnPlay").onclick = addToFun;
 const gameover =() => {
   if(pet.hunger === 0 && pet.sleep === 0 && pet.fun === 0) {
     alert("Game Over") 
-    document.getElementById("puppy").src="dead.png"
+    document.getElementById("puppy").src="images/dead.png"
   } else if (pet.hunger === 0) {
-    document.getElementById("puppy").src="hungry pup.png"
+    document.getElementById("puppy").src="images/hungry pup.png"
   } else if(pet.sleep === 0) {
-    document.getElementById("puppy").src="tiredPup.png"
+    document.getElementById("puppy").src="images/tiredPup.png"
   } else if (pet.fun === 0) {
-    document.getElementById("puppy").src="bored pup.png"
+    document.getElementById("puppy").src="images/bored pup.png"
   }
 }
 

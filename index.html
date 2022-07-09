@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Tamagotchi</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,14 +14,19 @@
     <h1>Welcome to Tamagotchi game!</h1>
   </header>
 
+  <div id="lightsON">
+    <button id="lightsBtn" class="lights" > Lights ON/OFF </button>
+  </div>
+
   <div id="logName" > 
     <button id="nameBtn" class="name" > Name </button>
   </div>
 
-  <div id="age"> <h3>Age:</h3>
-    <div id="ageBar">0</div>
-      
+  <div id="age-container">
+  <div id="age">Age: 
+    <div id="ageBar"> 0 </div>
       </div>
+    </div>
   
   <div id="petImg">
     <p>

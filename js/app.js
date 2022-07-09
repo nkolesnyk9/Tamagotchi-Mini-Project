@@ -20,6 +20,15 @@ function inputName () {
   }
 }
 
+const lightsOff = document.querySelector("#lightsBtn")
+lightsOff.addEventListener("click",darkMode) 
+
+function darkMode () {
+  let element = document.body;
+  element.classList.toggle("dark-mode")
+}
+
+  
 
 const addToAge = () => {
   if(pet.hunger > 0 && pet.sleep > 0 && pet.fun > 0) {
@@ -30,7 +39,7 @@ const addToAge = () => {
 let timerAge = setInterval(addToAge, 3500)
 
 const morphPet = () => {
-  if(pet.age > 0) {
+  if(pet.age > 3) {
     document.getElementById("puppy").src="morphedPup.png"
   }
 
